@@ -15,10 +15,23 @@ module.exports = {
   resolve: {
     extensions: ['.jsx', '.js']
   },
+
+
   plugins: [
     new HtmlWebpackPlugin({
       template: src + '/index.html',
       filename: 'index.html'
     })
-  ]
+  ],
+  //webpack-dev-server の設定
+  devServer: {
+    //ルートディレクトリの指定
+    contentBase: dist,
+    //サーバー起動時にブラウザを自動的に起動
+    open: true,
+    // ルートディレクトリのファイルを監視
+    watchContentBase: true,
+    // ポート番号を変更
+    port: 3000
+  }
 };

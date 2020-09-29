@@ -6,7 +6,8 @@
     "scripts": {
         "start": "watch 'npm run start'",
         "build": "NODE_ENV=development webpack --config ./config/webpack/webpack.config.js",
-        "prod": "NODE_ENV=production webpack-dev-server  --config ./config/webpack/webpack.config.js"
+        "prod": "NODE_ENV=production webpack-dev-server  --config ./config/webpack/webpack.config.js",
+        "serv": "NODE_ENV=development webpack-dev-server --open  --config ./config/webpack/webpack.config.js"
     },
     "devDependencies": {
         "@babel/core": "^7.6.0",
